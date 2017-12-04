@@ -9,21 +9,24 @@ namespace AdventOfCode2017.Days
         public static int PartOne(string input)
         {
             int result = 0;
-            int.TryParse(input.Substring(0, 1), out int firstChar);
-            int previousChar = firstChar;
+            int.TryParse(input.Substring(0, 1), out int firstInt);
+            int previousInt = firstInt;
+
             for (int i = 1; i < input.Length; i++)
             {
-                int.TryParse(input.Substring(i, 1), out int currentChar);
+                int.TryParse(input.Substring(i, 1), out int currentInt);
 
-                if (currentChar == previousChar)
+                if (currentInt == previousInt)
                 {
-                    result += currentChar;
+                    result += currentInt;
                 }
-                previousChar = currentChar;
+                previousInt = currentInt;
             }
 
-            if (previousChar == firstChar)
-                result += previousChar;
+            if (previousInt == firstInt)
+            {
+                result += previousInt;
+            }
 
             return result;
         }
@@ -33,17 +36,19 @@ namespace AdventOfCode2017.Days
             int result = 0;
             for (int i = 0; i < input.Length; i++)
             {
-                int.TryParse(input.Substring(i, 1), out int currentChar);
+                int.TryParse(input.Substring(i, 1), out int currentInt);
 
                 int nextIndex = i + (input.Length / 2);
                 if (nextIndex >= input.Length)
-                    nextIndex = i - (input.Length / 2);
-
-                int.TryParse(input.Substring(nextIndex, 1), out int nextChar);
-
-                if (currentChar == nextChar)
                 {
-                    result += currentChar;
+                    nextIndex = i - (input.Length / 2);
+                }
+
+                int.TryParse(input.Substring(nextIndex, 1), out int nextInt);
+
+                if (currentInt == nextInt)
+                {
+                    result += currentInt;
                 }
             }
 
