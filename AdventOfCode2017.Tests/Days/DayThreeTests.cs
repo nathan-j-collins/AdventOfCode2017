@@ -14,5 +14,15 @@ namespace AdventOfCode2017.Tests.Days
             var result = DayThree.PartOne(input);
             Assert.AreEqual(expected, result);
         }
+
+        [DataTestMethod]
+        [DataRow(125, 133)]
+        [DataRow(10, 11)]
+        public void DayThreePartTwoReturnsCorrectly(int input, int expected)
+        {
+            DayThree.Reset();
+            var result = DayThree.PartTwo(input);
+            Assert.AreEqual(expected, result);
+        }
     }
 }
