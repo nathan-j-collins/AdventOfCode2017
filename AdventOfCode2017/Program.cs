@@ -17,7 +17,8 @@ namespace AdventOfCode2017
             //Console.WriteLine(DayThree.PartOne(38));
             //DayFourInput();
             //DayFiveInput();
-            Console.WriteLine(DayThree.PartTwo(289326));
+            //Console.WriteLine(DayThree.PartTwo(289326));
+            Console.WriteLine(DaySix.PartOne(""));
             Console.ReadLine();
         }
 
