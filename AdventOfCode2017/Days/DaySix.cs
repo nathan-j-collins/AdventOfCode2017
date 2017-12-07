@@ -19,7 +19,7 @@ namespace AdventOfCode2017.Days
         private static int ProcessDaySix(string input, bool partTwo)
         {
             var counter = 0;
-            input = "2\t8\t8\t5\t4\t2\t3\t1\t5\t5\t1\t2\t15\t13\t5\t14";
+            //input = "2\t8\t8\t5\t4\t2\t3\t1\t5\t5\t1\t2\t15\t13\t5\t14";
             var dict = new Dictionary<string, bool>();
 
             var numbers = input.Split('\t').ToList().ConvertAll(int.Parse);
@@ -33,8 +33,8 @@ namespace AdventOfCode2017.Days
 
                 numbers[indexOfHighest] = 0;
 
-                var remainder = numbers.Count % highestNumber;
-                var amount = (int)Math.Round((double)highestNumber / numbers.Count, 0, MidpointRounding.AwayFromZero);
+                var remainder =  highestNumber % (numbers.Count - 1);
+                var amount = (int)Math.Round((double)highestNumber / (numbers.Count - 1), 0, MidpointRounding.AwayFromZero);
 
                 Redistribute(numbers, indexOfHighest, highestNumber, remainder, amount);
 

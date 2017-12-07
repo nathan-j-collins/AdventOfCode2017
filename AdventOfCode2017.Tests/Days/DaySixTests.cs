@@ -3,6 +3,7 @@ using AdventOfCode2017.Days;
 
 namespace AdventOfCode2017.Tests.Days
 {
+    [TestClass]
     public class DaySixTests
     {
         [DataTestMethod]
