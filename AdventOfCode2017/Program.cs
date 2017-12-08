@@ -18,7 +18,9 @@ namespace AdventOfCode2017
             //DayFourInput();
             //DayFiveInput();
             //Console.WriteLine(DayThree.PartTwo(289326));
-            Console.WriteLine(DaySix.PartOne(""));
+            //Console.WriteLine(DaySix.PartOne(""));
+            //DaySevenInput();
+            DayEightInput();
             Console.ReadLine();
         }
 
@@ -38,6 +40,18 @@ namespace AdventOfCode2017
         {
             var file = File.ReadAllText("bin/Debug/netcoreapp2.0/Inputs/DayFive.txt");
             Console.WriteLine(DayFive.PartOne(file));
+        }
+
+        private static void DaySevenInput()
+        {
+            var file = File.ReadAllText("bin/Debug/netcoreapp2.0/Inputs/DaySeven.txt");
+            Console.WriteLine(DaySeven.PartTwo("pbga (66)\r\nxhth (57)\r\nebii (61)\r\nhavc (66)\r\nktlj (57)\r\nfwft (72) -> ktlj, cntj, xhth\r\nqoyq (66)\r\npadx (45) -> pbga, havc, qoyq\r\ntknk (41) -> ugml, padx, fwft\r\njptl (61)\r\nugml (68) -> gyxo, ebii, jptl\r\ngyxo (61)\r\ncntj (57)"));
+        }
+
+        private static void DayEightInput()
+        {
+            var file = File.ReadAllText("bin/Debug/netcoreapp2.0/Inputs/DayEight.txt");
+            Console.WriteLine(DayEight.PartTwo(file));
         }
     }
 }
